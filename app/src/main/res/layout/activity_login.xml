@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon2" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_marginBottom="-2dp"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"
+        android:background="@drawable/login_box"
+        android:layout_margin="10dp"
+        android:hint="   아이디" />
+
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:textSize="20dp"
+        android:background="@drawable/login_box"
+        android:hint="   비밀번호" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="로그인"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:background="@drawable/button"
+        android:textColor="#B58347" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="회원가입"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="18dp"  />
+
+    </LinearLayout>
+
+</LinearLayout>

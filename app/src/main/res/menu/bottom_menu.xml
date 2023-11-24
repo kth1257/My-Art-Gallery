@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        android:title="메인화면"/>
+
+    <item
+        android:id="@+id/action_add"
+        android:enabled="true"
+        android:icon="@drawable/baseline_add_box_24"
+        android:title="그림그리기"/>
+
+    <item
+        android:id="@+id/action_user"
+        android:enabled="true"
+        android:icon="@drawable/baseline_person_24"
+        android:title="마이페이지"/>
+</menu>

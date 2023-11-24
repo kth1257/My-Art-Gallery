@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/paletteButton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color1" />
+
+    <Button
+        android:id="@+id/paletteButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color2" />
+
+    <Button
+        android:id="@+id/paletteButton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color3" />
+
+    <Button
+        android:id="@+id/paletteButton4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color4" />
+
+    <Button
+        android:id="@+id/paletteButton5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color5" />
+
+    <Button
+        android:id="@+id/paletteButton6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color6" />
+
+    <Button
+        android:id="@+id/paletteButton7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color7" />
+
+    <Button
+        android:id="@+id/paletteButton8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color8" />
+
+    <Button
+        android:id="@+id/paletteButton9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color9" />
+
+    <Button
+        android:id="@+id/paletteButton10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/palette_color10" />
+
+</LinearLayout>

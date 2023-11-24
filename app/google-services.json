@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "533331842323",
+    "project_id": "my-art-museum-62670",
+    "storage_bucket": "my-art-museum-62670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533331842323:android:9f34cd03c5ddc710b2f6e6",
+        "android_client_info": {
+          "package_name": "com.example.art"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqsotWPqQ7JCh3WmB_09UD7yKe5dZyZg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
