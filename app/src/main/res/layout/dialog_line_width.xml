@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/sub_color"
+    android:padding="16dp">
+
+    <!-- 선 굵기 조절을 위한 SeekBar -->
+    <SeekBar
+        android:id="@+id/seekBarLineWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:paddingBottom="16dp" />
+
+    <!-- 선 굵기 예시를 표시할 뷰 -->
+    <View
+        android:id="@+id/ViewLineWidthExample"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/black"/>
+
+    <!-- 선 굵기를 적용하는 버튼 -->
+    <Button
+        android:id="@+id/btnApplyLineWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="적용" />
+</LinearLayout>

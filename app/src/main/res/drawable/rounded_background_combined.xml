@@ -1,0 +1,113 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/red">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color1" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp" />
+        </shape>
+    </item>
+
+    <item android:id="@+id/orange">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color2" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/yellow">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color3" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/green">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color4" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/dark_green">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color5" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/blue">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color6" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/dark_blue">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color7" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/purple">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color8" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/white">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color9" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+    <item android:id="@+id/black">
+        <shape android:shape="oval">
+            <solid android:color="@color/palette_color10" />
+            <corners
+                android:bottomLeftRadius="25dp"
+                android:bottomRightRadius="25dp"
+                android:topLeftRadius="25dp"
+                android:topRightRadius="25dp"/>
+        </shape>
+    </item>
+
+</layer-list>

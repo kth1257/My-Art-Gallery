@@ -1,5 +1,7 @@
 package com.example.art;
 
+import android.util.Log;
+
 /**
  *  사용자 계정 정보 모델 클래스
  */
@@ -42,5 +44,6 @@ public class UserAccount {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+        Log.d("UserAccount", "닉네임 설정: " + nickname);
     }
 }

@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SignupActivity">
+    tools:context=".SignupActivity"
+    android:background="@color/background_color">
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent">
@@ -22,13 +23,15 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="아이디"
-          android:textSize="18sp"
+          android:textSize="22sp"
           android:textStyle="bold"/>
 
       <EditText
           android:id="@+id/et_email"
+          android:background="@drawable/input_box"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="60dp"
+          android:layout_marginBottom="10dp"
           android:hint="이메일" />
 
       <TextView
@@ -36,14 +39,16 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="비밀번호"
-          android:textSize="18sp"
+          android:textSize="22sp"
           android:textStyle="bold"/>
 
       <EditText
-          android:id="@+id/et_pw"
+          android:id="@+id/et_password"
+          android:background="@drawable/input_box"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="60dp"
           android:inputType="textPassword"
+          android:layout_marginBottom="10dp"
           android:hint="비밀번호" />
 
       <TextView
@@ -51,19 +56,25 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="닉네임"
-          android:textSize="18sp"
+          android:textSize="22sp"
           android:textStyle="bold"/>
       <EditText
-          android:id="@+id/et_nick"
+          android:id="@+id/et_nickname"
+          android:background="@drawable/input_box"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="60dp"
+          android:layout_marginBottom="10dp"
           android:hint="닉네임" />
 
 
       <Button
           android:id="@+id/btn_signup"
+          android:background="@drawable/button"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="60dp"
+          android:textSize="22sp"
+          android:textColor="#B58347"
+          android:textStyle="bold"
           android:text="회원 가입" />
 
 

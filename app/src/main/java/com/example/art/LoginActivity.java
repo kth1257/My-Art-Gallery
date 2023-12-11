@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("myartmuseum");
 
         mEtEmail = findViewById(R.id.et_email);
-        mEtPw = findViewById(R.id.et_pw);
+        mEtPw = findViewById(R.id.et_password);
 
 
 

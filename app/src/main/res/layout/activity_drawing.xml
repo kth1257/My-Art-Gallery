@@ -1,40 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <com.example.art.DrawingView
-        android:id="@+id/drawingView"
-        android:background="@color/white"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_width="match_parent" />
+    <!-- 메인 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/colorButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="색상" />
+        <!-- 상단에 버튼들을 담고 있는 레이아웃 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sub_color"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/lineWidthButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="선 굵기" />
-    <Button
-        android:id="@+id/eraserButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="지우개" />
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="로그아웃" />
+            <!-- 팔레트 열고 닫는 버튼 -->
+            <ImageButton
+                android:id="@+id/btn_palette"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/palette"
+                android:background="@android:color/transparent"
+                android:text="색상"
+                android:contentDescription="팔레트 열기"/>
 
-</LinearLayout>
+            <!-- 나머지 버튼들 -->
+
+
+            <ImageButton
+                android:id="@+id/btn_fill"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/color_fill"
+                android:background="@android:color/transparent"/>
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/back"
+                android:background="@android:color/transparent"/>
+            <ImageButton
+                android:id="@+id/btn_forward"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/forward"
+                android:background="@android:color/transparent"/>
+
+            <ImageButton
+                android:id="@+id/btn_eraser"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="지우개"
+                android:src="@drawable/eraser"
+                android:background="@android:color/transparent"
+                android:onClick="toggleEraserMode" />
+            <ImageButton
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_save_24"
+                android:background="@android:color/transparent"
+                android:text="그림 저장" />
+
+        </LinearLayout>
+
+        <!-- 그림 그리는 레이아웃 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 그림 그리는 뷰 -->
+            <com.example.art.DrawingView
+                android:id="@+id/drawingView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <!-- 팔레트를 담고 있는 레이아웃 -->
+            <RelativeLayout
+                android:id="@+id/paletteLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:background="@drawable/box"
+                android:clickable="true"
+                android:visibility="gone"
+                android:onClick="onPaletteLayoutClick">
+
+                <!-- 팔레트 색상을 나타낼 뷰들 -->
+                <LinearLayout
+                    android:id="@+id/colorPalette"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/box"
+                    android:gravity="center">
+                    <!-- 첫 번째 줄 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageButton
+                            android:id="@+id/red"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_red"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/orange"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_orange"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/yellow"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_yellow"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/green"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_green"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/dark_green"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_dark_green"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/btn_line_width"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:text="선 굵기"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/line_weight"
+                            android:onClick="showLineWidthDialog"/>
+                </LinearLayout>
+
+                <!-- 두 번째 줄 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/blue"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_blue"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/dark_blue"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_dark_blue"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/purple"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_purple"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/white"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_white"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                        <ImageButton
+                            android:id="@+id/black"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:src="@drawable/circle_black"
+                            android:background="@android:color/transparent"
+                            android:outlineProvider="background" />
+
+                    <ImageButton
+                        android:id="@+id/btn_color"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/color_picker"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:text="색상" />
+                </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <!-- 팔레트 이외의 내용 추가 -->
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

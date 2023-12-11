@@ -5,10 +5,13 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/background_color"
     tools:context=".LoginActivity">
 
 
     <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,19 +26,19 @@
         android:layout_marginBottom="-2dp"
         android:inputType="textEmailAddress"
         android:textSize="20dp"
-        android:background="@drawable/login_box"
+        android:background="@drawable/input_box"
         android:layout_margin="10dp"
         android:hint="   아이디" />
 
     <EditText
-        android:id="@+id/et_pw"
+        android:id="@+id/et_password"
         android:layout_width="400dp"
         android:layout_height="60dp"
         android:ems="10"
         android:layout_gravity="center"
         android:inputType="textPassword"
         android:textSize="20dp"
-        android:background="@drawable/login_box"
+        android:background="@drawable/input_box"
         android:hint="   비밀번호" />
 
     <Button

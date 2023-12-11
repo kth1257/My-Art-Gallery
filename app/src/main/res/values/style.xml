@@ -3,7 +3,8 @@
 
     <style name="AppTheme.TransparentStatus" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Other theme attributes -->
-        <item name="android:windowTranslucentStatus">true</item>
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:windowBackground">@color/background_color</item>-->
     </style>
 
 </resources>

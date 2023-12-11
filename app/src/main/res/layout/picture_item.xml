@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_box"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/box"
+            android:padding="10dp"> <!-- 내부 간격 조절 -->
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/> <!-- 아래쪽 간격 조절 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"> <!-- 수평 중앙 정렬 추가 -->
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="닉네임"
+                    android:textSize="15sp"
+                    android:textColor="@color/main_color"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"/> <!-- 오른쪽 간격 조절 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"> <!-- 좋아요 아이콘과 텍스트를 수직 중앙 정렬 -->
+                    <TextView
+                        android:id="@+id/tv_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:text="좋아요"/>
+                    <ImageView
+                        android:id="@+id/iv_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/like"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
